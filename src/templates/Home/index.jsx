@@ -1,11 +1,11 @@
 import { useCallback, useEffect, useState } from 'react';
 
-import './styles.css';
+import '../Home/style.css';
 
 import { Posts } from '../../components/Posts';
 import { loadPosts } from '../../utils/load-posts'
 import { Button } from '../../components/Button';
-import { TextInput } from '../../components/TextInput';
+import { InputSearch } from '../../components/InputSearch';
 
 export const Home = () => {
   const [posts, setPosts] = useState([]);
@@ -56,7 +56,7 @@ export const Home = () => {
           <h1>Search value: {searchValue}</h1>
         )}
 
-        <TextInput searchValue={searchValue} handleChange={handleChange} />
+        <InputSearch searchValue={searchValue} handleChange={handleChange} />
       </div>
 
       {filteredPosts.length > 0 && (
